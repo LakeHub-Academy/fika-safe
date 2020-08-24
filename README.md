@@ -16,17 +16,23 @@ A boda boda (motorbike) taxi safety app for registering the boda boda operators 
 - Express
 
 # live Link
+
 http://fikasafe.herokuapp.com
 
 # Get Started
 
 - You first need to clone the repository
-- create sendgrid account and add your `SG_KEY` in `.env` file.
-- create Africastalking account and add your API key in the `.env` file.
+- create sendgrid account and generate your email API key
+- create `.env` file in project's root folder add `API_KEY` and assign it your mongodb db url,
+  add `SG_KEY` and assign it your sendgrid email API.
+- create Africastalking account to get your sms API.
+- change directory to sacco create `.env` file in sacco root folder add `API_KEY` and assign it
+  your mongodb url, add `AT_KEY` and assign it your Africastalking sms API
 - install the dependencies by running `npm install` in your terminal
 - Run `npm start`start your express server. You can now view the app by navigating to `http://localhost:5000` in your browser.
 
 # Contributors
+
 👤 Patrick Nyatindo
 
 - Github: [nyatindopatrick](https://github.com/nyatindopatrick)
@@ -34,6 +40,7 @@ http://fikasafe.herokuapp.com
 - Linkedln: [Patrick Nyatindo](https://www.linkedin.com/in/nyatindopatrick)
 
 👤 Cyrus Kiprop
+
 - Github: [Cyrus-Kiprop](https://github.com/Cyrus-Kiprop)
 - Twitter: [@kipropjs](https://twitter.com)
 - Linkedln: [Cyrus Kiprop](https://www.linkedin.com/in/)

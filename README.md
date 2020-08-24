@@ -29,7 +29,10 @@ http://fikasafe.herokuapp.com
 - change directory to sacco create `.env` file in sacco root folder add `API_KEY` and assign it
   your mongodb url, add `AT_KEY` and assign it your Africastalking sms API
 - install the dependencies by running `npm install` in your terminal
-- Run `npm start`start your express server. You can now view the app by navigating to `http://localhost:5000` in your browser.
+- Run `npm start`start your express server. You can now view the app by navigating
+  to `http://localhost:5000` in your browser.
+- use postman to register as Application's Admin to enable you to login to the Appliction
+- in postman send a post request to localhost:5000/users/admin either send the data using x-www-form-urlencoded or in form of JSON data
 
 # Contributors
 

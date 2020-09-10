@@ -1,3 +1,5 @@
+import './public/assets/css/style';
+import React from 'react';
 const dotenv = require('dotenv');
 dotenv.config();
 const logger = require('morgan');
@@ -17,21 +19,21 @@ app.use(express.static("public"));
 // app.use( express.static( "uploads" ) );
 app.use(logger('dev'))
 // Passport Config
-require('./config/passport')(passport);
+require('./src/components/config/passport')(passport);
 
 // DB Config
-const db = require('./config/keys').mongoURI;
+const db = require('./src/components/config/keys').mongoURI;
 
 // Connect to MongoDB
 mongoose
   .connect(
     db, {
-      keepAlive: true,
-      useNewUrlParser: true,
-      useCreateIndex: true,
-      useFindAndModify: false,
-      useUnifiedTopology: true 
-    })
+    keepAlive: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+  })
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
@@ -73,9 +75,9 @@ app.use(function (req, res, next) {
 });
 
 // Routes
-app.use('/', require('./routes/index.js'));
-app.use('/sacco', require('./routes/users.js'));
-app.use('/sms', require('./routes/sms.js'));
+app.use('/', require('./src/routes/index.js'));
+app.use('/sacco', require('./src/routes/users.js'));
+app.use('/sms', require('./src/routes/sms.js'));
 
 
 //error 404 page middleware
